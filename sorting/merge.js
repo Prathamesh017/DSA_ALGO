@@ -7,7 +7,8 @@ function merge(arr, low, mid, high) {
   let temp = []
   let left = low   //first element of left arr
   let right = mid + 1 //first element of right arr
- 
+   
+  //we can assume that that every iteration our array is getting sorted sorted 
   //check till left<==mid means left hypo arr is finished
   //check till right<==high means right hypo arr is fished
   while (left <= mid && right <= high) {
