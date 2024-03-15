@@ -51,3 +51,6 @@ let majorityEle;
  return majorityEle;
 }
 console.log(majorElement([3,2,3]))
+
+//https://leetcode.com/problems/majority-element-ii/description/
+//Optimal Soln of this prblm is similar to that of above
