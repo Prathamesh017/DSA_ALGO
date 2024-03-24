@@ -35,4 +35,4 @@ class LinkedList {
     console.log(element)
   }
 }
-module.exports = { LinkedList }
+module.exports = { LinkedList,Node }
