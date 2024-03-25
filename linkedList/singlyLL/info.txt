@@ -1,0 +1,3 @@
+USE Fast and Slow Ptr for 
+1)Middle of LL
+2)Detect LOOP
