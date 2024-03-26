@@ -25,6 +25,20 @@ class LinkedList {
       ll.add(element)
     }
   }
+  addRandom(arr){
+   const nodes = arr.map(val => new Node(val));
+   // Link nodes
+   for (let i = 0; i < nodes.length - 1; i++) {
+     nodes[i].next = nodes[i + 1];
+    }
+   for (let i = 0; i < nodes.length; i++) {
+     const randomIndex = Math.floor(Math.random() * nodes.length);
+     nodes[i].random = nodes[randomIndex];
+    }
+
+    this.head=nodes[0];
+ 
+  }
   print() {
     let currentFirstNode = this.head
     let element = ''
@@ -35,4 +49,7 @@ class LinkedList {
     console.log(element)
   }
 }
+
+const l1=new LinkedList();
+l1.addRandom([1,2,3]);
 module.exports = { LinkedList,Node }
