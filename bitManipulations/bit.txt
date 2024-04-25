@@ -1,0 +1,12 @@
+Important
+* Using & and ^ 1 to set the last bit accordingly
+* XOR of any Number(n^n) is 0 and 0 and Number is still Number
+* Pattern Explained in 4 question
+* XOR actually helps in differentation of 2 bits
+like only same bits return 1
+* (no%2===1) is same as (no&1)
+* (no=(no/2)) is same as  no=no>>1;
+*  2^n is same as 1>>n
+* to set a bit use | OR
+* to check set bit use &
+* 
