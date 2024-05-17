@@ -1,0 +1,86 @@
+* Recursion is basically a function which calls itself. It should fulfill 2 conditions
+ * Base Case - It should have a base case to terminate our function
+ * Recursive Step - A set of rules which should reduce our inputs with each step  to reach our base case 
+
+* Base Case - Writing a Base Case
+Think What can be the smallest reduced value of the input whose value you know  
+for eg in term of factorial of any number  , 1 will be smallest and its factorial is also 1.
+
+* Recursion Tree- Try to Visualize A Recursion Tree. 
+in terms of functions calling function and what would each recursion call may return.It also helps us the understand Time ans Space Complexity
+Fibonacci is great example to Visualize;
+              fibonacci(5)
+         /                       \
+fibonacci(4)                 fibonacci(3)
+  /        \                    /       \
+fib(3)   fib(2)            fib(2)    fib(1)
+ /    \     /   \          /    \
+fib(2) fib(1) fib(1)    fib(1) fib(0)
+/   \
+fib(1) fib(0)
+
+* Recursive Call Stack
+  1. Every Function Call adds  new frame to call stack
+  2. Each Frame(Function Call) has its own set of local variables
+
+
+  Call Stack:
+  -----------
+  | fibonacci(5) | <- Top of the stack
+  -----------
+  | fibonacci(4) | 
+  -----------
+  | fibonacci(3) |
+  -----------
+  | fibonacci(2) |
+  -----------
+  | fibonacci(1) |
+  -----------
+  each number would be local to its  own local function 
+
+* Calculating Time Complexity and Space Complexity
+ * Space Complexity - It generally is same as far as the depth of recurion 
+  tree , for eg in the case of fibonacci -> it would go from n to 1 hence S.C O(n) There is no extra space we are using , but when we use recurison , it will function stack space .
+ * Time Complexity - Directly Equivalent to number of function calls made , but  also can grow expontentailly in some cases like fibonacci;
+
+#! Learn  to calculate factorial,fib and binary search mathematically 
+(https://www.youtube.com/watch?v=eWXLxn4JbZA)
+
+* Tail Recursion
+  Tail Recursion is a type of recursion where recursion call is the last step performed in the function call
+  #*exampple of tail recursion , here we don't multiple on returning time , but keep the factorial with us, with each iteration, so the compiler sees , the we don't have anything after recursion step,Instead of adding a new stack frame for each recursive call, the compiler can reuse the current stack frame, which effectively turns the recursion into a loop. This optimization can save memory and prevent stack overflow errors for deep recursive calls. and we can direcyly return from the base condition 
+  function fact(n,f){
+    //Base Case
+    if(n==1){
+      return f   
+    }
+
+    return fact(n-1,n*f) 
+  }
+
+
+* Backtracking 
+  Keep tracking the progress till we are correct
+  Once we return , revert the change as we are backtracking  our changes
+  Questions of Combinations and Permutations are generally done with backtracking
+  ALL Possibilties+Permutation+Combination+Subsets Questions are generally done with backtracking
+
+* Permutations and Combinations 
+  Permutation and Combination are the ways to arrange a group of objects eg 'a' 'b','c' by selecting them in a specific order eg = 'ab','ba' etc and forming their subsets.These are the methods employed in counting how many outcomes are possible in various situations
+
+  * Permutation
+  A permutation is a count of the different arrangements which can be made from the given set of things
+  For example, if you have the letters "a", "b", and "c", the permutations would include "abc", "acb", "bac", "bca", "cab", and "cba". 
+  These are valid permutations because each have different order
+  
+  Considering 10 digits from 0-9, and difference 4 digit pin numbers,
+  The possible permutation are=P(n,r)= (n!)/(n−r)! = P(10,4)= (10!/10-4!)=5040
+  If ,Repeatation is also Possible P(n,r)=n^r
+  
+
+  * Combination 
+  A combination is all about grouping. The number of different groups which can be formed from the available things can be calculated using combinations.
+  A team of 2 is formed from 5 students(a, b, c, d, e) ,
+  The possible combination are=C(n,r)= (n!)/r!((n−r)!) = P(5,2)= (5!/(5-2!)*2!)=10
+
+  Deciding Whether to use permutation or combination depends upon order, in Above  students example choosing (a,b) is same as (b,a) ,hence combination , if order was important then permutation
