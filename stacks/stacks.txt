@@ -1,0 +1,19 @@
+Stacks
+Stacks is a simple data structure which stores data that follows Last-In-First-Principal (LIFO)
+
+Basic Operations on Stack:
+In order to make manipulations in a stack, there are certain operations provided to us.
+push() to insert an element into the stack
+pop() to remove an element from the stack
+top() Returns the top element of the stack.
+isEmpty() returns true if stack is empty else false.
+isFull() returns true if the stack is full else false.
+
+
+Monotonic Stack - Ascending Order Stack
+
+Approaches
+* When Soln needs adjacent values 
+* When we we have to find `Next Smaller Number to LEFT` (NSL) , Next Smaller Number to RIGHT(NSR)
+* When we we have to find `Next Larger Number to LEFT` (NLL) , Next Larger Number to RIGHT(NLR)
+
