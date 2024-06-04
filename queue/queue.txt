@@ -1,0 +1,13 @@
+Queues
+A Simple Linear Data structure which stores data in First In First Format.
+In Queue, Insertion is done from rear and deletion is done from front. 
+
+Difference between Stack and Queue
+The Simple Difference between queue and stack is we delete the oldest data from queue and newest data from stack
+
+
+
+Types Of Queues
+* Simple Queue - Normal Queue
+* Circular Queue - As the name suggest ,last node points to first 
+* Priority Queue - A priority queue is a type of queue that arranges elements based on their priority values. 
