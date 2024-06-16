@@ -1,0 +1,19 @@
+A greedy algorithm is a type of optimization algorithm that makes locally optimal choices at each step to find a globally optimal solution. It operates on the principle of “taking the best option now” without considering the long-term consequences.
+
+
+example- https://leetcode.com/problems/bag-of-tokens/description/  
+consider  tokens = [100,200,300,400], power = 200 , totalScore = 0 , we have to increase and try to find the maxScore possible , but we can only do 1 outof 2 operation on each token[i]
+a=> if current power is less than any token , we can increase totalScore by 1 so token[0]<200 hence totalScore can be 1  but now power would be 200-100=100 
+b=> if current score is 1, then we can add any token into power for eg token[3]+100=500 , but totalScore would be reduced by 1 hence 0
+
+so this are the choices user has decide ,to find the max score, so user has to take a greedy decision based on current totalScore
+
+
+* Algorithm
+* Determine  Choices At Each Step according to the condition
+* Select Approate Greedy Choice 
+* Keep Making Greedy Choice tell reached solution 
+
+
+Detecting Greedy Question
+* If the question states 2 choices to make , then surely it is greedy
