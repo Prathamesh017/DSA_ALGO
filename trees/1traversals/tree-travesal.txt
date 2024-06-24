@@ -1,0 +1,96 @@
+Traversals
+There are 2 techniques in which we can visit nodes of the tree
+
+1)Breadth-First Search (BFS) 
+2)Depth-First Search (DFS)
+
+
+* Breadth First Search
+With BFS, we visit each level one by one (hence breadth)
+   1       so -> 1 ,2,5,3,4,6
+  / \
+ 2   5
+/ \ / \
+3  4  6 
+
+* Depth First Seach 
+There are 3 types in DFS
+1)PreOrder Traversal (Root,Left,Right)
+2)InOrder Traversal   (Left,Root,Right)
+3)PostOrder Traversal (Left,Right,Root)
+
+(Pre means Root at first, Inorder means in Middle,post means last)
+
+* INOrder(Left,Root,Right)
+Locates the Subtree , then first left, then root,then Right
+      (A)       
+    /    \
+  (B)     ( C)
+/    \     / \
+(D)  (E)  (G) (H)
+    /         /  \
+   (F)       (I)  (J)
+
+Steps
+1)Starting from A ,'left' will B's Tree ((D<-B->E->F)) and again from B ,'left' would  D   so first left element 'D' , then root so 'B' , then move right to find new subtree (E->F)
+ELEMENTS_VISITED='D','B'
+2)So In new subtree again 'left' hence 'F' and then 'root' hence 'E' ,there is no right furthur so in this way the first left we started above finished so again back to root so
+ELEMENTS_VISITED='D','B','F','E'
+3)So Now 'root' so 'A' added then again 'right' side for C's Tree .
+ELEMENTS_VISITED= 'D','B','F','E','A'
+4)So In C's Tree , Again Left First Hence 'G' , and Root  'C' and right to H's Tree
+ELEMENTS_VISITED= 'D','B','F','E','A','G','C'
+5)So In H's Subtree first Left 'I', then root 'H' and right 'J'
+so with InOrder we will traverse in this way 
+ELEMENTS_VISITED= 'D','B','F','E','A','G','C','I','H','J'
+
+
+
+* PreOrder(Root,Left,Right)
+Locates the Subtree , then first root, then left,then Right
+      (A)       
+    /    \
+  (B)     ( C)
+/    \     / \
+(D)  (E)  (G) (H)
+    /         /  \
+   (F)       (I)  (J)
+Steps
+1)Starting from Root so 'A' , then moving to left so new sub tree B's so again root 'B',then again left 'D' and then right  new subtree E's , Again Root 'E' and Left 'F'
+ELEMENTS_VISITED='A','B','D','E','F'
+2)So first search we started  completed with root and left ,now moving to right 'C' Subtree
+3)So Again Root 'C', then left 'G' and moving right , new Subtree 'H'
+Element_Visited='A','B','D','E','F','C','G'
+4)so again root 'H',left 'I', right 'J'
+Element_Visited='A','B','D','E','F','C','G','H','I','J'
+
+
+
+* PostOrder(Left,Right,Root)
+Locates the Subtree , then first left, then Right and last root
+      (A)       
+    /    \
+  (B)     ( C)
+/    \     / \
+(D)  (E)  (G) (H)
+    /         /  \
+   (F)       (I)  (J)
+Steps
+1)Starting Left Most , would B's Subtree hence first left 'D',then right to E's Subtree
+ELEMENTS_VISITED='D'
+2)In E's subtree , first left 'F' , no right hence directly to root 'E'
+ELEMENTS_VISITED='D','F','E'
+3)So First's Search's Left completed , now right so new subtree C , In C , first left so 'G' and right to 'H' Subtree
+ELEMENTS_VISITED='D','F','E','G'
+4)In H's Subtree, First Left 'I' , then Right 'J' and back to root 'H'
+ELEMENTS_VISITED='D','F','E','G','I','J','H'
+5)So second's search's right also completed of C's so now root hence 'C'
+ELEMENTS_VISITED='D','F','E','G','I','J','H','C'
+6)So First's Left and Right both completed so now root hence 'A'
+ELEMENTS_VISITED='D','F','E','G','I','J','H','C','A'
+
+
+
+Learning All Recurive First At the time of Revision(DFS)
+THEN Learn BFS
+Then iterative ones

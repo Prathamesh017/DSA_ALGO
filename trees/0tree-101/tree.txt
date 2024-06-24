@@ -1,0 +1,67 @@
+(Trees) 
+
+
+Tree is Non Linear Data Structure unlike linear D.S Like Arrays,LinkedList,Stack,Queues Etc. which  is hierarchical tree structure
+
+A Good Example would be folders like each folder can have or have not another folder inside it representing a tree like structure
+
+
+
+Trees are Represented with a bunch of nodes having a parent-child relationship with one another
+
+Each node in a tree data structure must have the following properties:
+* The starting node will called the 'root' of tree
+* The next Hierachical node would be called 'child' of the above node
+* The node doesnt have children would be considered 'leaf' node
+* Each Node having children node can be considered a 'subtree' in itself
+
+
+* Binary Tree
+A Binary Tree is a Tree where each node at the most have 2 childrens
+
+Types of Binary Tree
+* Full Binary Tree
+A Full bInary Tree should have either 0 nodes or 2 nodes . can't have 1 node will look incomplete    
+      A
+     / \
+    B   C
+   / \ / \
+  D  E F  G
+Real World Application : In machine learning, full binary trees can represent decision trees where each internal node tests an attribute, each branch represents an outcome, and each leaf node represents a class label or decision.
+
+* Complete Binary Tree
+A Complete Binary Tree is a tree which is filled completely except the last level. it can have node at last level but should be left only
+      A                            
+     / \
+    B   C
+   / \ / \
+  D  E F  
+Real World Application: Used in priority queues where each node's key is greater than or less than the keys of its children, ensuring efficient access to the highest or lowest priority element.
+
+* Perfect Binary  Tree
+Every Leaf node should be at same level. In Below(Left One) C,D,E are child nodes but are not on same level hence this is not a perfect Binary tree
+      A                 A                          
+     / \               / \   (Perfect Binary tree) 
+    B   C             B   C
+   / \               / \  / \
+  D  E              D  E  G  F 
+Real World Application - Used to model competitions where each match is a comparison between two entities, and the winners progress to the next round, leading up to a final winner.
+
+* Balanced Binary Tree
+A  Tree which should not have level more than log(n)  . for eg for n=8 , it should  not contain levels more than 3 
+(log(8)=3)
+Application-Used in databases and file systems for efficient indexing and retrieval where balanced height ensures operations remain logarithmic in time complexity.
+     
+* Denerate Tree
+A Tree which every node has only 1 children
+   A
+    \
+     B
+      \
+       C
+        \
+         D    
+Real World Application -While degenerate trees are typically undesirable in practice due to their poor performance characteristics, understanding them is crucial for:
+Worst-Case Analysis: Recognizing how certain operations (like insertion in an unbalanced binary search tree) can degrade into linear time.
+Algorithm Design: Designing algorithms and data structures that avoid the creation of degenerate trees or can handle them efficiently.
+Testing and Debugging: Ensuring that binary tree implementations are robust and can handle or transform degenerate cases efficiently.
