@@ -78,4 +78,5 @@ tree.insert(18)
 const postOrder = new PostOrder()
 const arr = postOrder.postOrder_traversal_recursive(tree.root, [])
 const arr2 = postOrder.postOrder_traversal_iterative(tree.root, [])
+//   3,  7,  5, 12, 18, 15, 10
 console.log(arr,arr2);

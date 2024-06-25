@@ -18,6 +18,7 @@ class PreOrder {
   }
   preorder_traversal_iterative(node, arr) {
     //Approach - Using Stack ,At each level , I will insert node in right-left way as we are going left right , left should be on before right(debug if not understood)
+
     let levelStack = []
     //inserting root
     levelStack.push(node)
@@ -54,5 +55,5 @@ tree.insert(18)
 const preorder = new PreOrder()
 const arr = preorder.preorder_traversal_recursive(tree.root, [])
 const arr2 = preorder.preorder_traversal_iterative(tree.root, [])
-
+// 10,  5,  3, 7, 15, 12, 18
 console.log(arr, arr2)

@@ -65,4 +65,5 @@ tree.insert(18)
 const inorder = new InOrder()
 const arr = inorder.inorder_traversal_recurive(tree.root, [])
 const arr2 = inorder.inorder_traversal_iterative(tree.root, [])
+//3,  5,  7, 10, 12, 15, 18
 console.log(arr,arr2)
