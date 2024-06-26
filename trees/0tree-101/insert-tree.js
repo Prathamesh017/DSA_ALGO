@@ -61,4 +61,4 @@ tree.insert(18);
      3    7   12 18
 */
 
-module.exports = { Tree, Node}
+module.exports = { Tree, Node,tree}
