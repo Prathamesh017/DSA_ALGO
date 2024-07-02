@@ -90,6 +90,9 @@ ELEMENTS_VISITED='D','F','E','G','I','J','H','C'
 ELEMENTS_VISITED='D','F','E','G','I','J','H','C','A'
 
 
+PREORDER+INORDER=UNIQUE BINARY TREE
+POSTORDER+INORDER=UNIQUE BINARY TREE
+PRE+POST=no unique binary tree (can create many trees)(ref:16,17 question)
 
 Learning All Recurive First At the time of Revision(DFS)
 THEN Learn BFS
