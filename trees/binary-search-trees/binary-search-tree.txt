@@ -1,0 +1,16 @@
+Binary Search Tree
+Binary Search Tree has leftNode<Root && Root<RightNode for every subtree
+         8
+       /   \                
+      3     12       on everysubtree l<root && root<r
+    /  \    /
+   1   6    9
+      / \    \ 
+     4  7    14 
+
+It doesn't contain duplicates generally in most cases
+The Height of such trees in most cases is log2n  (pretty much self explainatory as left always is smaller than root)
+
+The reason it is called binary search tree as searching a value in this tree is similar to binary search tree.   
+
+The Inorder traversal in binary search tree is always sorted as inorder is left-root-right and BST is left<root &&  root<right
