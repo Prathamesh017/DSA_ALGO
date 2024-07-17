@@ -31,21 +31,12 @@ function dfsTraversal(adjacenyList,startingPoint,visitedArr,arr){
     }
   }
   return arr;
+
+  
 }
 
 
-function dfsTraversal2(adjacenyList,startingPoint,visitedArr,arr){
-  const size=adjacenyList[startingPoint].length;
-  arr.push(startingPoint);
-  visitedArr[startingPoint]=1;
-  for (let  i= 0; i <size; i++) {
-    const ele=adjacenyList[startingPoint][i];
-    if(visitedArr[ele]!==1){
-      dfsTraversal(adjacenyList,ele,visitedArr,arr);
-    }
-  }
-  return arr;
-}
+
 const adjacenyList=[[],[2,3],[1,5,6],[1,4,7],[3,8],[2],[2],[3,8],[4,7]];
 const visitedArr = new Array(adjacenyList.length+1).fill(0);
 const ans=dfsTraversal(adjacenyList,1,visitedArr,[]);
