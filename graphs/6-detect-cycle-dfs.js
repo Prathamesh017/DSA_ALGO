@@ -2,18 +2,16 @@
 /*
 Given a graph , find if it has cycle with DFS,
    2- 4- 6 
- /          \ 
+ /         \ 
 1           8
   \        /
    3- 5 -7
 
-Basic Approach with dfs ,we will go from 1 ->2 ->4->8->7->5->3->1 and when we find 1 is already visited and it is not parent of 3 we will return true
+Basic Approach with dfs ,we will go from 1 ->2 ->4->6->8->7->5->3->1 and when we find 1 is already visited and it is not parent of 3 we will return true(parent of 1 will be -1 )
 
 */
 
 function detectCycleDFS(adjacenyList,curr,parent,visitedArr){
-   
-  
   const size=adjacenyList[curr].length;
   visitedArr[curr]=1;
   for (let i = 0; i < size; i++) {  

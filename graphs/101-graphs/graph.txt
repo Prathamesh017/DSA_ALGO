@@ -152,3 +152,19 @@ Example, (C)
 
 Linear Graph ,which has no cycles will always be Bipartite ,Graphs with cycles should have 
 even no of nodes(even cycle length) to be Bipartite 
+
+
+#Topological Sorting
+It only exists in Directed ACylic Graph(DAG)
+Topological Sorting states that if there is a edge between U and V , then U should be before V in the Sorting
+5->0<-4     
+|     |
+v     v
+2->3->1     
+
+5->0,4->0 ,5->2,2->3,3->1,4->1 (U->V)
+so one correct Topological sorting would be - 5,4,2,3,1,0, another would be 4,5,2,3,1,0
+So why only directed , because undirected would mean 1->2 and 2->1 so we can't sort it 
+and why acyclic?
+imagine a cycle   1->2->3->1 , so we want 1 to be before 2 , 2 before 3 and 3 before 1 hence not possible 
+                     
